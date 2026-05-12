@@ -8,7 +8,7 @@
     <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="img/favicon.png" rel="icon" />
+    <link href="img/brand/favicon.png" rel="icon" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -120,7 +120,7 @@
       e.preventDefault();
       const inputVal = document.getElementById('certInput').value.trim().toUpperCase();
 
-      fetch('certificates.json')
+      fetch('data/certificates.json')
         .then(response => response.json())
         .then(data => {
           const cert = data.find(entry => entry.certificate_number.toUpperCase() === inputVal);
@@ -170,7 +170,7 @@
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         // Load header
-        fetch("Includes/header.html")
+        fetch("includes/header.html")
           .then(response => response.text())
           .then(data => {
             document.getElementById("header").innerHTML = data;
@@ -187,7 +187,7 @@
           });
 
         // Load footer
-        fetch("Includes/footer.html")
+        fetch("includes/footer.html")
           .then(response => response.text())
           .then(data => document.getElementById("footer").innerHTML = data);
       });
@@ -209,12 +209,12 @@
 
         if (blogId === 1) {
           blogTitle = "Blog Title 1";
-          blogImage = "img/blog-1.jpg";
+          blogImage = "img/blog/blog1.jpg";
           blogContent =
             "This is the detailed content for Blog 1. It can be a long article or post.";
         } else if (blogId === 2) {
           blogTitle = "Blog Title 2";
-          blogImage = "img/blog-2.jpg";
+          blogImage = "img/blog/blog2.jpg";
           blogContent =
             "This is the detailed content for Blog 2. It can be a long article or post.";
         }

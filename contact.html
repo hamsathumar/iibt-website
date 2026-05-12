@@ -14,7 +14,7 @@
     />
 
     <!-- Favicon -->
-    <link href="img/favicon.png" rel="icon" />
+    <link href="img/brand/favicon.png" rel="icon" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -308,7 +308,7 @@
     <script>
       document.addEventListener("DOMContentLoaded", function() {
         // Load header
-        fetch("Includes/header.html")
+        fetch("includes/header.html")
           .then(response => response.text())
           .then(data => {
             document.getElementById("header").innerHTML = data;
@@ -325,7 +325,7 @@
           });
 
         // Load footer
-        fetch("Includes/footer.html")
+        fetch("includes/footer.html")
           .then(response => response.text())
           .then(data => document.getElementById("footer").innerHTML = data);
       });
