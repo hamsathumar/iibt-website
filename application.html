@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Apply Now - IIBT Campus</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      name="description"
+      content="Apply for programs at IIBT Campus. Fill out the application form to start your educational journey with us."
+    />
+    <meta content="application, apply, IIBT Campus, courses, programs" name="keywords" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.png" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- Application Form Stylesheet -->
+    <link href="css/application.css" rel="stylesheet" />
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <!-- Spinner End -->
+
+    <div id="header"></div>
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 about-page-header">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 text-center">
+            <h1 class="display-3 text-white animated slideInDown">Apply Now</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item">
+                  <a class="text-white" href="index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a class="text-white" href="application.html">Application</a>
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Application Form Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+          <h6 class="section-title bg-white text-center text-primary px-3">
+            Application Form
+          </h6>
+          <h1 class="mb-5">Start Your Journey With Us</h1>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="application-card p-4 p-md-5">
+              <form id="applicationForm" onsubmit="return false;">
+                <div class="row g-3">
+                  <!-- Full Name -->
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="fullName"
+                        name="fullName"
+                        placeholder="Full Name"
+                        required
+                        minlength="3"
+                      />
+                      <label for="fullName">Full Name *</label>
+                    </div>
+                    <div class="invalid-feedback" id="fullNameError"></div>
+                  </div>
+
+                  <!-- Permanent Address -->
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <textarea
+                        class="form-control"
+                        id="address"
+                        name="address"
+                        placeholder="Permanent Address"
+                        style="height: 100px"
+                        required
+                        minlength="10"
+                      ></textarea>
+                      <label for="address">Permanent Address *</label>
+                    </div>
+                    <div class="invalid-feedback" id="addressError"></div>
+                  </div>
+
+                  <!-- NIC Number -->
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="nic"
+                        name="nic"
+                        placeholder="NIC Number"
+                        required
+                      />
+                      <label for="nic">NIC Number *</label>
+                    </div>
+                    <div class="invalid-feedback" id="nicError"></div>
+                  </div>
+
+                  <!-- WhatsApp Number -->
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="whatsapp"
+                        name="whatsapp"
+                        placeholder="WhatsApp Number"
+                        required
+                      />
+                      <label for="whatsapp">WhatsApp Number *</label>
+                    </div>
+                    <div class="invalid-feedback" id="whatsappError"></div>
+                  </div>
+
+                  <!-- Email -->
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        name="email"
+                        placeholder="Email Address"
+                        required
+                      />
+                      <label for="email">Email Address *</label>
+                    </div>
+                    <div class="invalid-feedback" id="emailError"></div>
+                  </div>
+
+                  <!-- Course Selection -->
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <select class="form-select" id="course" name="course" required>
+                        <option value="" selected disabled>Select a Program</option>
+                        <option value="HND in Computing">HND in Computing</option>
+                        <option value="HND in Business">HND in Business</option>
+                        <option value="HND in Quantity Surveying">HND in Quantity Surveying</option>
+                        <option value="Diploma in English">Diploma in English</option>
+                        <option value="Certificate in IT">Certificate in IT</option>
+                        <option value="Other">Other</option>
+                      </select>
+                      <label for="course">Select Program *</label>
+                    </div>
+                    <div class="invalid-feedback" id="courseError"></div>
+                  </div>
+
+                  <!-- OTP Section -->
+                  <div class="col-12">
+                    <div class="otp-section">
+                      <div class="d-flex flex-column flex-md-row gap-3 align-items-md-center">
+                        <button
+                          type="button"
+                          class="btn btn-secondary flex-shrink-0"
+                          id="sendOtpBtn"
+                          onclick="sendOTP()"
+                        >
+                          <i class="fa fa-paper-plane me-2"></i>Send OTP to Email
+                        </button>
+                        <div class="otp-timer" id="otpTimer" style="display: none;">
+                          <i class="fa fa-clock me-1"></i>
+                          <span id="timerText">05:00</span>
+                        </div>
+                      </div>
+
+                      <div class="otp-input-group mt-3" id="otpInputGroup" style="display: none;">
+                        <div class="form-floating">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="otpCode"
+                            name="otpCode"
+                            placeholder="Enter OTP"
+                            maxlength="6"
+                          />
+                          <label for="otpCode">Enter 6-digit OTP *</label>
+                        </div>
+                        <button
+                          type="button"
+                          class="btn btn-outline-primary mt-2"
+                          id="verifyOtpBtn"
+                          onclick="verifyOTP()"
+                        >
+                          <i class="fa fa-check me-2"></i>Verify OTP
+                        </button>
+                      </div>
+
+                      <div class="otp-status mt-2" id="otpStatus"></div>
+                    </div>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <div class="col-12 mt-4">
+                    <button
+                      class="btn btn-primary w-100 py-3"
+                      type="button"
+                      id="submitBtn"
+                      onclick="submitApplication()"
+                      disabled
+                    >
+                      <i class="fa fa-paper-plane me-2"></i>Submit Application
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+              <!-- Success Message -->
+              <div class="success-message" id="successMessage" style="display: none;">
+                <div class="text-center py-5">
+                  <i class="fa fa-check-circle text-success" style="font-size: 4rem;"></i>
+                  <h3 class="mt-4 text-success">Application Submitted Successfully!</h3>
+                  <p class="text-muted">Thank you for applying to IIBT Campus. We will contact you soon.</p>
+                  <a href="index.html" class="btn btn-primary mt-3">
+                    <i class="fa fa-home me-2"></i>Back to Home
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Info Section -->
+        <div class="row mt-5">
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="info-box text-center p-4">
+              <i class="fa fa-envelope text-primary mb-3" style="font-size: 2rem;"></i>
+              <h5>Email Us</h5>
+              <p class="mb-0"><a href="mailto:info@iibtcampus.lk">info@iibtcampus.lk</a></p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="info-box text-center p-4">
+              <i class="fa fa-phone text-primary mb-3" style="font-size: 2rem;"></i>
+              <h5>Call Us</h5>
+              <p class="mb-0"><a href="tel:+94777817181">+94 777 81 71 81</a></p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="info-box text-center p-4">
+              <i class="fab fa-whatsapp text-primary mb-3" style="font-size: 2rem;"></i>
+              <h5>WhatsApp</h5>
+              <p class="mb-0"><a href="https://wa.me/94777817181">Chat with us</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Application Form End -->
+
+    <!-- Floating Button Start -->
+    <div class="tooltip-container flt-icn">
+      <span class="text">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="22"
+          class="bi bi-send-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z"
+          ></path>
+        </svg>
+      </span>
+      <span class="tooltip2">
+        <a href="tel:+94777817181">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            class="bi bi-facebook"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5"
+            />
+          </svg>
+        </a>
+      </span>
+      <span class="tooltip4">
+        <a href="https://wa.me/94777817181?text=I'm%20interested%20to%20join%20in%20IIBT%20Campus...">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            class="bi bi-whatsapp"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+            ></path>
+          </svg>
+        </a>
+      </span>
+    </div>
+    <!-- Floating Button End -->
+
+    <!-- Footer Start -->
+    <div id="footer"></div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-to-top btn-lg-square back-to-top">
+      <i class="bi bi-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Application Form Javascript -->
+    <script src="js/application.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Load header
+        fetch("Includes/header.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("header").innerHTML = data;
+
+            // Highlight the current page link
+            const currentPage = window.location.pathname.split("/").pop();
+            const navLinks = document.querySelectorAll("#header a");
+
+            navLinks.forEach((link) => {
+              if (link.getAttribute("href") === currentPage) {
+                link.classList.add("active");
+              }
+            });
+          });
+
+        // Load footer
+        fetch("Includes/footer.html")
+          .then((response) => response.text())
+          .then((data) => (document.getElementById("footer").innerHTML = data));
+      });
+    </script>
+  </body>
+</html>

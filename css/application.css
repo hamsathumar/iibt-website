@@ -1,0 +1,218 @@
+/**
+ * IIBT Campus Application Form Styles
+ */
+
+/* Application Card */
+.application-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+.application-card .form-control,
+.application-card .form-select {
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.application-card .form-control:focus,
+.application-card .form-select:focus {
+  border-color: #fb8500;
+  box-shadow: 0 0 0 0.2rem rgba(251, 133, 0, 0.15);
+}
+
+.application-card .form-floating > label {
+  color: #666;
+}
+
+.application-card .form-floating > .form-control:focus ~ label,
+.application-card .form-floating > .form-control:not(:placeholder-shown) ~ label,
+.application-card .form-floating > .form-select ~ label {
+  color: #fb8500;
+}
+
+/* Error Messages */
+.invalid-feedback {
+  display: none;
+  font-size: 0.85rem;
+  color: #dc3545;
+  margin-top: 0.25rem;
+  padding-left: 0.5rem;
+}
+
+/* OTP Section */
+.otp-section {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 1.5rem;
+  border: 2px dashed #dee2e6;
+}
+
+.otp-timer {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: #fb8500;
+  font-size: 1.1rem;
+}
+
+.otp-input-group {
+  animation: fadeIn 0.3s ease;
+}
+
+.otp-status {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Verified Badge */
+.verified-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.verified-badge i {
+  font-size: 1.5rem;
+}
+
+/* Buttons */
+.application-card .btn-secondary {
+  background-color: #2b2e63;
+  border-color: #2b2e63;
+  color: #fff;
+}
+
+.application-card .btn-secondary:hover {
+  background-color: #181d38;
+  border-color: #181d38;
+}
+
+.application-card .btn-secondary:disabled {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.application-card .btn-primary {
+  background-color: #fb8500;
+  border-color: #fb8500;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.application-card .btn-primary:hover {
+  background-color: #e67a00;
+  border-color: #e67a00;
+}
+
+.application-card .btn-primary:disabled {
+  background-color: #ccc;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+.application-card .btn-outline-primary {
+  color: #fb8500;
+  border-color: #fb8500;
+}
+
+.application-card .btn-outline-primary:hover {
+  background-color: #fb8500;
+  color: #fff;
+}
+
+/* Success Message */
+.success-message {
+  animation: fadeIn 0.5s ease;
+}
+
+.success-message i {
+  animation: scaleIn 0.5s ease;
+}
+
+/* Info Boxes */
+.info-box {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.info-box a {
+  color: #181d38;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.info-box a:hover {
+  color: #fb8500;
+}
+
+/* Shake Animation for Invalid OTP */
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .application-card {
+    padding: 1.5rem !important;
+  }
+
+  .otp-section {
+    padding: 1rem;
+  }
+
+  .info-box {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .application-card .btn {
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .otp-timer {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+}
